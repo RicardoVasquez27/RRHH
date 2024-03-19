@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Asignaciones</h1>
+
+<div id="assignments">
+  <% @assignments.each do |assignment| %>
+    <%= render assignment %>
+    <p>
+      <%= link_to "Mostrar esta assignacion", assignment %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "Nueva assignacion", new_assignment_path %>
